@@ -50,5 +50,4 @@ Program powinien wykonać klasyfikację za pomocą algorytmu k-NN (k-Nearest Nei
    - Wczytaj z klawiatury dwa 4-wymiarowe wektory.
    - Wydrukuj odległość euklidesową/miejską między tymi wektorami.
 
-## Zasady:
-- Program należy zaimplementować w języku Java, unikając używania zewnętrznych bibliotek do analizy danych.
+
