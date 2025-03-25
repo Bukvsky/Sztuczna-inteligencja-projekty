@@ -41,7 +41,7 @@ def knn_algorithm(training_data, test_point, k):
         labels[line[1]] += 1
 
 
-
+    print(labels)
     return max(labels, key=labels.get)
 
 
@@ -75,8 +75,11 @@ def main():
     while True:
         if choice == 1:
             k = int(input(f'''Podaj paramter k: '''))
+            while(k> len(training_data) or k<1):
+                k = int(input(f'''Podaj poprawnie parametr k: '''))
             result = validateCorrect(training_data,test_data,k)
             accuracy = (result/len(test_data))*100
+            print(f'======WYNIK======')
             print(f'Poprawnie sklasyfikowane: {result}/{len(test_data)}')
             print(f'Dokładność: {accuracy:.2f}%')
         elif choice == 2:
