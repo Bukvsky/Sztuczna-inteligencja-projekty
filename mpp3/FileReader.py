@@ -6,11 +6,10 @@ class fileReader:
         self.path = path
         self.totalCounter = 0
         self.charsDict = {}
-        self.charsPercentDict = {}
+        self.charsPercentDict = {k : 0 for k in 'abcdefghijklmnopqrstuvwxyz'}
 
     def generateDictionary(self):
         for filename in os.listdir(self.path):
-            print(filename)
             full_path = os.path.join(self.path, filename)
             with open(full_path, 'r', encoding='utf-8') as file:
                 for line in file:
